@@ -1,0 +1,9 @@
+2023-06-15 10:46:58.931 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2402 ms
+2023-06-15 10:46:59.564 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2023-06-15 10:47:00.446 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-15 10:47:00.462 INFO  c.e.medicalc.MedicalcApplication - Started MedicalcApplication in 5.727 seconds (process running for 7.393)
+2023-06-15 10:47:00.466 INFO  c.e.medicalc.MedicalcApplication - Application started
+2023-06-15 10:47:07.114 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+2023-06-15 11:30:13.551 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2023-06-15 11:30:16.987 INFO  c.e.m.r.ResultGraceRestController - Request to /GRACE/result

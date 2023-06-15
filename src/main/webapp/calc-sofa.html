@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>Шкала SOFA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        #spinner-div {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+<header th:fragment="head">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/index.html">Медицинские калькуляторы</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div id="calc_input" class="col-6">
+            <h1>Шкала SOFA</h1>
+            <form name="form" id="form">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td width="42%" align="right">
+                            <span class="medCalcFontOneBold">PaO<sub>2</sub></span></td>
+                        <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
+                            <input type="text" id="PaO2_param" min="1" max="10" name="PaO2_param" size="6" required pattern="\d*">
+                        </td>
+                        <td valign="top" align="left">
+                            <span> mmHg</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="42%" align="right">
+                            <span class="medCalcFontOneBold">FIO<sub>2</sub></span></td>
+                        <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
+                            <input type="text" id="FIO2_param" min="1" max="10" name="FIO2_param" size="6" required pattern="\d*">
+                        </td>
+                        <td valign="top" align="left">
+                            <span>%O2</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td valign="top" align="right">
+                            <span class="medCalcFontOneBold">Вспомогательная Искусственная вентиляция легких</span>
+                        </td>
+                        <td colspan="2" align="left">
+                            <input type=radio name="Ventilatory_Support_radio" id="togel1" value=1>
+                            <span class="medCalcFontOneClick"> Да (1)</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><br></td>
+                        <td colspan="2" align="left">
+                            <input type="radio" name="Ventilatory_Support_radio" id="togel2" value=0>
+                            <span class="medCalcFontOneClick"> Нет (0)</span></td>
+                    </tr>
+                    <tr>
+                        <td width="42%" align="right">
+                            <span class="medCalcFontOneBold">Тромбоциты</span></td>
+                        <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
+                            <input type="text" name="Platelets_param" min="1" max="10" id="Platelets_param" size="6" required
+                                   pattern="\d*">
+                        </td>
+                        <td valign="top" align="left">
+                            <span>  x10(3)/mcL</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="42%" align="right">
+                            <span class="medCalcFontOneBold">Общий Билирубин</span></td>
+                        <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
+                            <input type="text" id="Total_Bilirubin_param" min="1" max="10" name="Total_Bilirubin_param" size="6"
+                                   required
+                                   pattern="\d*"></td>
+                        <td valign="top" align="left">
+                            <span>  mg/dL</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td valign="top" align="right">
+                            <span class="medCalcFontOneBold">Артериальное Давление</span></td>
+                        <td colspan="2" align="left">
+                            <input type="radio" name="Blood_Pressure_radio" id="togel3" value=0>
+                            <span class="medCalcFontOneClick"> Гипотензия отсутствует (0)</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><br></td>
+                        <td colspan="2" align="left">
+                            <input type="radio" name="Blood_Pressure_radio" min="1" max="10" id="togel4" value=1>
+                            <span class="medCalcFontOneClick"> Среднее артериальное давление &lt;&nbsp;70&nbsp;мм&nbsp;рт.&nbsp;ст. (1)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left"><br></td>
+                        <td colspan="2" align="left">
+                            <input type="radio" name="Blood_Pressure_radio" id="togel5" value=2>
+                            <span class="medCalcFontOneClick"> Дофамин ≤&nbsp;5 мкг/кг/мин или любая доза добутамина (2)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left"><br></td>
+                        <td colspan="2" align="left">
+                            <input type="radio" name="Blood_Pressure_radio" id="togel6" value=3>
+                            <span class="medCalcFontOneClick">  Дофамин &gt;&nbsp;5 мкг/кг/мин, эпинефрин &lt;=&nbsp;0,1 мкг/кг/мин или норэпинефрин &lt;=&nbsp;0,1 мкг/кг/мин (3)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left"><br></td>
+                        <td colspan="2" align="left">
+                            <input type="radio" name="Blood_Pressure_radio" id="togel7" value=4>
+                            <span class="medCalcFontOneClick"> Дофамин &gt;&nbsp;15 мкг/кг/мин или эпинефрин &gt;&nbsp;0,1 мкг/кг/мин или норэпинефрин &gt;&nbsp;0,1 мкг/кг/мин (4)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="42%" align="right">
+                            <span class="medCalcFontOneBold">Оценка по шкале комы Глазго</span></td>
+                        <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
+                            <input type="text" name="Glasgow_Coma_Score_param" min="1" max="10" id="Glasgow_Coma_Score_param"
+                                   size="6"
+                                   required pattern="\d*"></td>
+                        <td valign="top" align="left">
+                            <span> points </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="42%" align="right"><span class="medCalcFontOneBold">Креатинин</span></td>
+                        <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
+                            <input type="text" name="Creatinine_param" min="1" max="10" id="Creatinine_param" size="6" required></td>
+                        <td valign="top" align="left">
+                            <span>mg/dL</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="42%" align="right"><span class="medCalcFontOneBold">Диурез</span></td>
+                        <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
+                            <input type="text" name="Urine_Output_param" min="1" max="10" id="Urine_Output_param" size="6" required>
+                        </td>
+                        <td valign="top" align="left"> <span style="white-space: nowrap;">
+                    <span class="medCalcFontOneBold">мл/сутки</span></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="col-12">
+                    <button style="float:left" type=submit id="Send" class="btn btn-primary mr-2 mb-2">Рассчитать</button>
+                    <button style="float:left" type=reset id="Reset"class="d-none d-sm-block btn btn-secondary mr-2 mb-2">Очистить</button>
+                </div>
+                <div class="clear"></div>
+            </form>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+<div id="result">
+    <h1 id="title" class="title"></h1>
+    <h1 id="details" class="details"></h1>
+</div>
+<div id="spinner-div" class="pt-5">
+    <div class="spinner-border text-primary" role="status">
+    </div>
+    <div class="text-primary">Подождите, идет расчет...</div>
+</div>
+<footer th:fragment="foot">
+    <div class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Медицинский калькулятор. Все права защищены.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Условия предоставления услуг</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Политика конфиденциальности</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>document.write("<script type='text/javascript' src='/js/calc-sofa.js?v=" + Date.now() + "'><\/script>");</script>
+</body>
+</html>

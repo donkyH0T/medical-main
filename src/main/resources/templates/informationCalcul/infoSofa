@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12" id="calcequation">
+      <div class="alert alert-info">Оценка органной недостаточности и риска смертности у пациентов в ОИТР по шкале SOFA (Sequential (Sepsis-related) Organ Failure Assessment). Оценка вероятности сепсиса (Сепсис-3) у пациентов в ОИТР.</div>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Формула</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PaO<sub>2</sub>/FIO<sub>2</sub> = 100 * PaO<sub>2</sub> / FIO<sub>2</sub></td>
+            </tr>
+            <tr>
+              <td>SOFAШкала = PaO<sub>2</sub>/FIO<sub>2</sub>Фактор + ТромбоцитыФактор + ОбщийБилирубинФактор + АртериальноеДавление + ОценкапоШкалеКомыГлазгоФактор + ПочечныйФактор</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div id="calcdetailsandvariables">
+    <span class="medCalcFontOneBold">Информация о расчетах и переменные</span>
+    <ul class="medCalcFontOne">
+      <li>Параметры уравнения, например, <b>Вспомогательная Искусственная вентиляция легких</b>, имеют два или больше дискретных значений, используемых в уравнениях. Цифры в скобках, например,  (1), представляют собой используемые значения.</li>
+      <li><b>ТромбоцитыФактор</b> — присвоенные значения в соответствии с упорядоченной логикой:
+        <ul class="list-unstyled">
+          <li>2 — тромбоциты ≥ 150 000/мм³</li>
+          <li>1 — тромбоциты 100 000–149 000/мм³</li>
+          <li>0 — тромбоциты < 100 000/мм³</li>
+        <li><span style="white-space: nowrap;">Если <b>Тромбоциты</b> &lt;20 x10(3)/mcL <b>ТромбоцитыФактор</b> = 4</span></li>
+                <li><span style="white-space: nowrap;">Иначе, если <b>Тромбоциты</b> &lt;50 x10(3)/mcL <b>ТромбоцитыФактор</b> = 3</span></li><li><span style="white-space: nowrap;">Иначе, если <b>Тромбоциты</b> &lt;100 x10(3)/mcL <b>ТромбоцитыФактор</b> = 2</span></li><li><span style="white-space: nowrap;">Иначе, если <b>Тромбоциты</b> &lt;150 x10(3)/mcL <b>ТромбоцитыФактор</b> = 1</span></li><li><span style="white-space: nowrap;">Иначе <b>ТромбоцитыФактор</b> = 0.</span></li></ul></li><li><b>ОбщийБилирубинФактор</b> — присвоенные значения в соответствии с упорядоченной логикой: <ul><li><span style="white-space: nowrap;">Если <b>Общий Билирубин</b> &lt;1.2 mg/dL <b>ОбщийБилирубинФактор</b> = 0</span></li><li><span style="white-space: nowrap;">Иначе, если <b>Общий Билирубин</b> &lt;2 mg/dL <b>ОбщийБилирубинФактор</b> = 1</span></li><li><span style="white-space: nowrap;">Иначе, если <b>Общий Билирубин</b> &lt;6 mg/dL <b>ОбщийБилирубинФактор</b> = 2</span></li><li><span style="white-space: nowrap;">Иначе, если <b>Общий Билирубин</b> &lt;12 mg/dL <b>ОбщийБилирубинФактор</b> = 3</span></li><li><span style="white-space: nowrap;">Иначе <b>ОбщийБилирубинФактор</b> = 4.</span></li></ul></li><li><b>ОценкапоШкалеКомыГлазгоФактор</b> — присвоенные значения в соответствии с упорядоченной логикой: <ul><li><span style="white-space: nowrap;">Если <b>Оценка по шкале комы Глазго</b> &gt;14 points <b>ОценкапоШкалеКомыГлазгоФактор</b> = 0</span></li><li><span style="white-space: nowrap;">Иначе, если <b>Оценка по шкале комы Глазго</b> &gt;12 points <b>ОценкапоШкалеКомыГлазгоФактор</b> = 1</span></li><li><span style="white-space: nowrap;">Иначе, если <b>Оценка по шкале комы Глазго</b> &gt;9 points <b>ОценкапоШкалеКомыГлазгоФактор</b> = 2</span></li><li><span style="white-space: nowrap;">Иначе, если <b>Оценка по шкале комы Глазго</b> &gt;5 points <b>ОценкапоШкалеКомыГлазгоФактор</b> = 3</span></li><li><span style="white-space: nowrap;">Иначе <b>ОценкапоШкалеКомыГлазгоФактор</b> = 4.</span></li></ul></li><li><b>PaO<sub>2</sub>/FIO<sub>2</sub>Фактор</b> — присвоенные значения в соответствии с упорядоченной логикой: <ul> <li>Если <b>PaO<sub>2</sub>/FIO<sub>2</sub></b> ≤100 и <b>Вспомогательная Искусственная вентиляция легких</b> <b>PaO<sub>2</sub>/FIO<sub>2</sub>Фактор</b> = 4</li> <li>Иначе, если <b>PaO<sub>2</sub>/FIO<sub>2</sub></b> ≤200 и <b>Вспомогательная Искусственная вентиляция легких</b> <b>PaO<sub>2</sub>/FIO<sub>2</sub>Фактор</b> = 3</li> <li>Иначе, если <b>PaO<sub>2</sub>/FIO<sub>2</sub></b> ≤300 <b>PaO<sub>2</sub>/FIO<sub>2</sub>Фактор</b> = 2</li> <li>Иначе, если <b>PaO<sub>2</sub>/FIO<sub>2</sub></b> ≤400 <b>PaO<sub>2</sub>/FIO<sub>2</sub>Фактор</b> = 1</li> <li>Иначе <b>PaO<sub>2</sub>/FIO<sub>2</sub>Фактор</b> = 0</li></ul></li>
+            <li><b>ПочечныйФактор</b> — присвоенные значения в соответствии с упорядоченной логикой:<ul> <li>Если <b>Креатинин</b>
+            &lt;1.2 mg/dL <b>очечныйФактор</b> = 0</li> <li>Иначе, если <b>Креатинин</b> &lt;2 mg/dL <b>очечныйФактор</b> = 1</li> <li>Иначе, если <b>Креатинин</b> &lt;3.5 mg/dL <b>очечныйФактор</b> = 2</li> <li>Иначе, если <b>Креатинин</b> &lt;5 mg/dL <b>очечныйФактор</b> = 3</li> <li>Иначе <b>очечныйФактор</b> = 4</li></ul></li>
+            <li><b>ПочечныйФактор</b> — также может устанавливаться на основе  показателей диуреза:<ul> <li>Если <b>Диурез</b>
+                &lt;500 mL/day <b>ПочечныйФактор</b> = 3</li> <li>Иначе, если <b>Диурез</b> &lt;200 mL/day <b>ПочечныйФактор</b> = 4</li></ul></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

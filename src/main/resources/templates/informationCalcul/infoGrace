@@ -1,0 +1,285 @@
+
+<div style="margin:0 auto;max-width: 50%;">
+  <div class="table-responsive">
+            <div class="alert alert-info">Шкала GRACE (Global Registry of Acute Coronary Events) позволяет оценить риск летальности и развития инфаркта миокарда на госпитальном этапе и в течение последующих 6 месяцев, а также определить оптимальный способ лечения конкретного больного.</div>
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                <tr><th>Возраст</th><th style="text-align: center;">Баллы</th><th>ЧСС, в&nbsp;мин.</th><th style="text-align: center;">Баллы</th></tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>&lt; 30</td>
+                    <td style="text-align: center;">0</td>
+                    <td>&lt; 50</td>
+                    <td style="text-align: center;">0</td>
+                </tr>
+                <tr>
+                    <td>30 - 39</td>
+                    <td style="text-align: center;">8</td>
+                    <td>50 - 69</td>
+                    <td style="text-align: center;">3</td>
+                </tr>
+                <tr>
+                    <td>40 - 49</td>
+                    <td style="text-align: center;">25</td>
+                    <td>70 - 89</td>
+                    <td style="text-align: center;">9</td>
+                </tr>
+                <tr>
+                    <td>50 - 59</td>
+                    <td style="text-align: center;">41</td>
+                    <td>90 - 109</td>
+                    <td style="text-align: center;">15</td>
+                </tr>
+                <tr>
+                    <td>60 - 69</td>
+                    <td style="text-align: center;">58</td>
+                    <td>110 - 149</td>
+                    <td style="text-align: center;">24</td>
+                </tr>
+                <tr>
+                    <td>70 - 79</td>
+                    <td style="text-align: center;">75</td>
+                    <td>150 - 199</td>
+                    <td style="text-align: center;">38</td>
+                </tr>
+                <tr>
+                    <td>80 - 89</td>
+                    <td style="text-align: center;">91</td>
+                    <td>&gt; 200</td>
+                    <td style="text-align: center;">46</td>
+                </tr>
+                <tr>
+                    <td>&gt; 90</td>
+                    <td style="text-align: center;">100</td>
+                    <td>&gt; 250</td>
+                    <td style="text-align: center;">46</td>
+                </tr>
+                </tbody>
+            </table>
+  </div>
+        <p>&nbsp</p>
+
+        <div class="table-responsive">
+            <table class="t_style table table-bordered table-striped">
+                <thead class="thead-dark">
+                <tr><th>Вид летальности</th><th class="text-center">Сумма баллов</th><th class="text-center">Риск</th><th class="text-center">Летальность</th></tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Систолическое АД, мм.рт.ст.</td>
+                    <td class="text-center">Баллы</td>
+                    <td>Креатинин крови, мкмоль/&nbsp;л</td>
+                    <td class="text-center">Баллы</td>
+                </tr>
+                <tr>
+                    <td>&lt; 80</td>
+                    <td class="text-center">58</td>
+                    <td>&lt; 35.36</td>
+                    <td class="text-center">1</td>
+                </tr>
+                <tr>
+                    <td>80 - 99</td>
+                    <td class="text-center">53</td>
+                    <td>35.36 - 70.71</td>
+                    <td class="text-center">4</td>
+                </tr>
+                <tr>
+                    <td>100 - 119</td>
+                    <td class="text-center">43</td>
+                    <td>70.72 - 106.07</td>
+                    <td class="text-center">7</td>
+                </tr>
+                <tr>
+                    <td>120 - 139</td>
+                    <td class="text-center">34</td>
+                    <td>106.08 - 141.43</td>
+                    <td class="text-center">10</td>
+                </tr>
+                <tr>
+                    <td>140 - 159</td>
+                    <td class="text-center">24</td>
+                    <td>141.43 - 176.7</td>
+                    <td class="text-center">13</td>
+                </tr>
+                <tr>
+                    <td>160 - 199</td>
+                    <td class="text-center">10</td>
+                    <td>176.8 - 353</td>
+                    <td class="text-center">21</td>
+                </tr>
+                <tr>
+                    <td>&gt; 200</td>
+                    <td class="text-center">0</td>
+                    <td>&gt; =354</td>
+                    <td class="text-center">28</td>
+                </tr>
+                <tr>
+                    <td>Тяжесть сердечной недостаточности по классификации Killip</td>
+                    <td style="text-align: center;">Баллы</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Кардиогенный шок (IV)</td>
+                    <td style="text-align: center;">59</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Острый отек легких (III)</td>
+                    <td style="text-align: center;">39</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Наличие хрипов в легких и/или повышенного давления в югулярных венах (II)</td>
+                    <td style="text-align: center;">20</td>
+                    <td></td>
+                    <td></td>
+               </tr>
+                <tr>
+                    <td>Отсутствие признаков застойной сердечной недостаточности (I)</td>
+                    <td style="text-align: center;">0</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Другие клинические параметры</td>
+                    <td style="text-align: center;">Баллы</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Остановка сердца (на момент поступления пациента)</td>
+                    <td style="text-align: center;">39</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Отклонение сегмента ST</td>
+                    <td style="text-align: center;">28</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Наличие диагностически значимого повышения уровня кардиоспецифических ферментов</td>
+                    <td style="text-align: center;">14</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>&nbsp</p>
+
+    
+  <div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th colspan="4">Острый коронарный синдром с подъемом сегмента ST</th>
+      </tr>
+      <tr>
+        <th class="text-center">Вид летальности</th>
+        <th class="text-center">Сумма баллов</th>
+        <th class="text-center">Риск</th>
+        <th class="text-center">Летальность</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Внутригоспитальная</td>
+        <td class="text-center">&lt; 126</td>
+        <td class="text-center">Низкий</td>
+        <td class="text-center">&lt; 2%</td>
+      </tr>
+      <tr>
+        <td>Внутригоспитальная</td>
+        <td class="text-center">126 - 154</td>
+        <td class="text-center">Средний</td>
+        <td class="text-center">2 - 5%</td>
+      </tr>
+      <tr>
+        <td>Внутригоспитальная</td>
+        <td class="text-center">&gt; 154</td>
+        <td class="text-center">Высокий</td>
+        <td class="text-center">&gt; 5%</td>
+      </tr>
+      <tr>
+        <td>В течение 6 месяцев</td>
+        <td class="text-center">&lt; 100</td>
+        <td class="text-center">Низкий</td>
+        <td class="text-center">&lt; 4.5%</td>
+      </tr>
+      <tr>
+        <td>В течение 6 месяцев</td>
+        <td class="text-center">100 - 127</td>
+        <td class="text-center">Средний</td>
+        <td class="text-center">4.5 - 11%</td>
+      </tr>
+      <tr>
+        <td>В течение 6 месяцев</td>
+        <td class="text-center">&gt; 127</td>
+        <td class="text-center">Высокий</td>
+        <td class="text-center">&gt; 11%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  </div>
+  <p>&nbsp</p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th colspan="4">Острый коронарный синдром без подъема ST</th>
+        </tr>
+        <tr>
+          <th class="text-center">Вид летальности</th>
+          <th class="text-center">Сумма баллов</th>
+          <th class="text-center">Риск</th>
+          <th class="text-center">Летальность</th>
+        </tr>
+      </thead>
+     <tbody>
+        <tr>
+          <td>Внутригоспитальная</td>
+          <td class="text-center">&lt; 109</td>
+          <td class="text-center">Низкий</td>
+          <td class="text-center">&lt; 1%</td>
+        </tr>
+        <tr>
+          <td>Внутригоспитальная</td>
+          <td class="text-center">109 - 140</td>
+        <td class="text-center">Средний</td>
+        <td class="text-center">1 - 3%</td>
+      </tr>
+      <tr>
+        <td>Внутригоспитальная</td>
+        <td class="text-center">&gt; 140</td>
+        <td class="text-center">Высокий</td>
+        <td class="text-center">&gt; 3%</td>
+      </tr>
+      <tr>
+        <td>В течение 6 месяцев</td>
+        <td class="text-center">&lt; 89</td>
+        <td class="text-center">Низкий</td>
+        <td class="text-center">&lt; 3%</td>
+      </tr>
+      <tr>
+        <td>В течение 6 месяцев</td>
+        <td class="text-center">89 - 118</td>
+        <td class="text-center">Средний</td>
+        <td class="text-center">3 - 8%</td>
+      </tr>
+      <tr>
+        <td>В течение 6 месяцев</td>
+        <td class="text-center">&gt; 118</td>
+        <td class="text-center">Высокий</td>
+        <td class="text-center">&gt; 8%</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>

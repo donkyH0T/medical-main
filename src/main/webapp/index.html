@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Медицинские калькуляторы</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="text-center">
+    <h1>Добро пожаловать в медицинский калькулятор</h1>
+    <p>Мы предоставляем качественные медицинские услуги для удовлетворения ваших потребностей в области здравоохранения.</p>
+</div>
+<section id="services">
+    <div class="container">
+        <h2>Наши калькуляторы</h2>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="/calc-sofa.html">
+                    <div class="card">
+                        <img src="/img/sofa.png" class="card-img-top" alt="Cardiology" width="200" height="300">
+                        <div class="card-body">
+                            <h4 class="card-title">Шкала SOFA</h4>
+                            <a href="/info.html?SOFA" class="card-text">Информация</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/calc-grace.html">
+                    <div class="card">
+                        <img src="/img/acs.jpg" class="card-img-top" alt="Cardiology" width="200" height="300">
+                        <div class="card-body">
+                            <h4 class="card-title">Шкала GRACE</h4>
+                            <a href="/info.html?GRACE" class="card-text">Информация</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="/calc-child-pugh.html">
+                    <div class="card">
+                        <img src="/img/liver.png" class="card-img-top" alt="Cardiology" width="200" height="300">
+                        <div class="card-body">
+                            <h4 class="card-title">Шкала Чайлд-Пью</h4>
+                            <a href="/info.html?Child-pugh" class="card-text">Информация</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>О нас</h2>
+        <hr>
+        <p>Мы - команда медицинских работников, создавшая медицинский калькулятор, который поможет вам быстро и точно рассчитать необходимые медицинские параметры.<br>
+            Наш калькулятор основан на последних медицинских стандартах и разработан с использованием передовых технологий, что позволяет нам обеспечить точные результаты.<br> 
+            Наша команда стремится обеспечить лучший уход за вашим здоровьем, и мы надеемся, что наш медицинский калькулятор поможет вам получить необходимую информацию для принятия важных решений о вашем здоровье.</p>
+    </div>
+</section>
+
+<footer th:fragment="foot">
+    <div class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Медицинский калькулятор. Все права защищены.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Условия предоставления услуг</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Политика конфиденциальности</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</footer>
+</body>
+</html>

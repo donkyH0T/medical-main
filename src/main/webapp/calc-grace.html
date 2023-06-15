@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>Шкала GRACE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        #spinner-div {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+<header th:fragment="head">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/index.html">Медицинские калькуляторы</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div class="col-6">
+            <h1>Шкала GRACE</h1>
+            <form name="form" id="form">
+                <div class="form-group col-md-6">
+                    <label id="lbl_age_grace" for="age_grace">Возраст</label>
+                    <div class="input-group">
+                        <input name="Возраст" min="1" max="10" type="text" class="form-control" id="age_grace"
+                               pattern="\d*"
+                               required/>
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon">лет</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label id="lbl_rate_grace" for="rate_grace">ЧСС</label>
+                    <div class="input-group">
+                        <input name="ЧСС" min="1" max="10" required type="text" class="form-control" id="rate_grace"
+                               pattern="\d*">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon1">уд/мин</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6"><label id="lbl_pressure_grace" for="pressure_grace">Систолическое
+                    АД</label>
+                    <div class="input-group">
+                        <input name="Систолическое АД" min="1" required max="10" type="text" class="form-control"
+                               id="pressure_grace" pattern="\d*">
+                        <div class="input-group-append"><span class="input-group-text"
+                                                              id="basic-addon2">мм.рт.ст.</span></div>
+                    </div>
+                </div>
+                <div class="form-group mb-1 col-md-6">
+                    <label id="lbl_kreatinin_grace" for="kreatinin_grace">Креатинин плазмы</label>
+                    <div class="unitfield input-group mb-3" id="unitfield_kreatinin_grace">
+                        <input name="Креатинин плазмы" min="1" max="10" required type="text" class="form-control"
+                               id="kreatinin_grace" pattern="\d*" koeff="1" index="1">
+                        <div class="input-group-append">
+                            <span class="input-group-text">мкмоль/л</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-left:-10px;">
+                    <div class="col-md-12">
+                        <div class="ml-1 mb-1 form-check">
+                            <input name="checkBox_grace" class="form-check-input" type="checkbox" value="1"
+                                   id="ans1_grace">
+                            <label class="form-check-label" for="ans1_grace">Остановка сердца (на момент поступления
+                                пациента)</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="ml-1 mb-1 form-check">
+                            <input name="checkBox_grace" class="form-check-input" type="checkbox" value="1"
+                                   id="ans2_grace">
+                            <label class="form-check-label" for="ans2_grace">Смещение сегмента ST, инверсия зубца
+                                Т</label>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="ml-1 mb-1 form-check">
+                            <input name="checkBox_grace" class="form-check-input" type="checkbox" value="1"
+                                   id="ans3_grace">
+                            <label class="form-check-label" for="ans3_grace">Повышенный уровень маркеров некроза
+                                миокарда в
+                                крови</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label id="lbl_ans4_grace" for="ans4_grace">Класс сердечной недостаточности (по классификации
+                        Killip)</label>
+                    <select style="background-color:#f7f7f7;" class="form-control" size="1" id="ans4_grace">
+                        <option value="1">Отсутствие признаков застойной сердечной недостаточности (I)</option>
+                        <option value="2">Наличие хрипов в легких и/или повышенного давления в югулярных венах (II)
+                        </option>
+                        <option value="3">Острый отек легких (III)</option>
+                        <option value="4">Кардиогенный шок (IV)</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button style="float:left" type=submit id="Send" class="btn btn-primary mr-2 mb-2">Рассчитать
+                    </button>
+                    <button style="float:left" type=reset class="d-none d-sm-block btn btn-secondary mr-2 mb-2">Очистить
+                    </button>
+                </div>
+            </form>
+            <div class="clear"></div>
+            <div id="result">
+                <h1 id="title" class="title"></h1>
+                <h1 id="details" class="details"></h1>
+            </div>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+<div id="spinner-div" class="pt-5">
+    <div class="spinner-border text-primary" role="status">
+    </div>
+    <div class="text-primary">Подождите, идет расчет...</div>
+</div>
+<footer th:fragment="foot">
+    <div class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Медицинский калькулятор. Все права защищены.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Условия предоставления услуг</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Политика конфиденциальности</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>document.write("<script type='text/javascript' src='/js/calc-grace.js?v=" + Date.now() + "'><\/script>");</script>
+</body>
+</html>

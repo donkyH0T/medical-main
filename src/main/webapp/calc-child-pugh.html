@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Шкала Чайлд-Пью</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        #spinner-div {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+<header th:fragment="head">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/index.html">Медицинские калькуляторы</a>
+        
+    </nav>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+        </div>
+        <div id="calcwrapper" class="col-6">
+            <h1>Шкала Чайлд-Пью</h1>
+            <div id="formwrapper">
+                <div class="form">
+                    <form name="form" id="form">
+                        <div class="forminput">
+                            <legend>Билирубин (общий), мкмоль/л</legend>
+                            <div class="dropdown">
+                                <select id="mySelect1" class="dropdown-select">
+                                    <option>&lt;34.2</option>
+                                    <option>34.2 - 51.3</option>
+                                    <option>&gt;51.3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="forminput">
+                            <legend>Альбумин, г/л</legend>
+                            <div class="dropdown">
+                                <select id="mySelect2" class="dropdown-select">
+                                    <option>&gt;35</option>
+                                    <option>28 - 35</option>
+                                    <option>&lt;28</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="forminput">
+                            <legend>МНО</legend>
+                            <div class="dropdown">
+                                <select id="mySelect3" class="dropdown-select">
+                                    <option>&lt;1.7</option>
+                                    <option>1.7 - 2.2</option>
+                                    <option>&gt;2.2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="forminput">
+                            <legend>Асцит</legend>
+                            <div class="dropdown">
+                                <select id="mySelect4" class="dropdown-select">
+                                    <option>Нет</option>
+                                    <option>Легкий</option>
+                                    <option>Средний или тяжелый</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="forminput">
+                            <legend>Энцефалопатия</legend>
+                            <div class="dropdown">
+                                <select id="mySelect5" class="dropdown-select">
+                                    <option>Нет</option>
+                                    <option>1 - 2 степень</option>
+                                    <option>3 - 4 степень</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="formbuttons">
+                            <input type="button" id="Send" value="Рассчитать">
+                            <input type="reset" value="Очистить">
+                        </div>
+                    </form>
+                </div>
+                <div id="result">
+                    <h1 id="title" class="title"></h1>
+                    <h1 id="details" class="details"></h1>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+<div id="spinner-div" class="pt-5">
+    <div class="spinner-border text-primary" role="status">
+    </div>
+    <div class="text-primary">Подождите, идет расчет...</div>
+</div>
+<footer th:fragment="foot">
+    <div class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Медицинский калькулятор. Все права защищены.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Условия предоставления услуг</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Политика конфиденциальности</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>document.write("<script type='text/javascript' src='/js/calc-child-pugh.js?v=" + Date.now() + "'><\/script>");</script>
+</body>
+</html>
