@@ -32,11 +32,10 @@ public class ResultGraceRestController {
     @SneakyThrows
     public ResponseEntity<ResultDto> result(@NonNull @RequestBody GraceDto graceDto) {
         log.info("Request to /GRACE/result");
-        Integer calc = graceService.calculate(graceDto);
-        if (calc == null) {
+        ResultDto resultDto=graceService.calculateResult(graceDto);
+        if (resultDto == null) {
             return ResponseEntity.badRequest().body(new ResultDto("Ошибка расчета GRACE"));
         }
-        ResultDto result = graceService.result(calc);
-        return ResponseEntity.ok(result);
+        return ResponseEntity.ok(resultDto);
     }
 }

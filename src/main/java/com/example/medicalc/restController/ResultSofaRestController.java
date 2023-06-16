@@ -31,11 +31,10 @@ public class ResultSofaRestController {
     @PostMapping("SOFA/result")
     public ResponseEntity<ResultDto> result(@NonNull @RequestBody SofaDto sofaDto) {
         log.info("Request to /SOFA/result");
-        Integer calc=sofaService.calculate(sofaDto);
-        if(calc==null){
+        ResultDto resultDto=sofaService.calculateResult(sofaDto);
+        if(resultDto==null){
             return ResponseEntity.badRequest().body(new ResultDto("Ошибка расчета SOFA"));
         }
-        ResultDto resultDto=sofaService.result(calc);
         return ResponseEntity.ok(resultDto);
     }
 }

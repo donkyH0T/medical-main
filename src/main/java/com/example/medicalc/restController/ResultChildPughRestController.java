@@ -35,10 +35,10 @@ public class ResultChildPughRestController {
     @SneakyThrows
     public ResponseEntity<ResultDto> result(@NonNull @RequestBody ChildPughDto childPughDto) {
         log.info("Request to /Child-Pugh/result");
-        Integer calc=childPughService.calculate(childPughDto);
-        if(calc==null){
+        ResultDto resultDto= childPughService.calculateResult(childPughDto);
+        if(resultDto==null){
             return ResponseEntity.badRequest().body(new ResultDto("Ошибка расчета Child-Pugh"));
         }
-        return ResponseEntity.ok(childPughService.result(calc));
+        return ResponseEntity.ok(resultDto);
     }
 }

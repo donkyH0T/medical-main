@@ -10,4 +10,6 @@ public interface MedicalCalculatorService<T extends BaseCalcDto> {
     public ResultDto result(Integer scales);
 
     public Integer calculate(T object);
+
+    public ResultDto calculateResult(T dto);
 }

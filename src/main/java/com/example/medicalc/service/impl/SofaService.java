@@ -80,7 +80,20 @@ public class SofaService implements MedicalCalculatorService<SofaDto> {
     }
 
     @Override
+    public ResultDto calculateResult(SofaDto dto) {
+        Integer offset;
+        offset=calculate(dto);
+        if(offset==null || offset==0){
+            return null;
+        }
+        return result(offset);
+    }
+
+    @Override
     public ResultDto result(Integer calc) {
+        if(calc==null || calc==0){
+            return null;
+        }
         ResultDto res = new ResultDto();
         res.setTitle(String.format("%s баллов по шкале SOFA", calc));
         if (calc >= 12) {

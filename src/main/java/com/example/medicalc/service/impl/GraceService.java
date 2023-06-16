@@ -4,6 +4,7 @@ import com.example.medicalc.dto.GraceDto;
 import com.example.medicalc.dto.ResultDto;
 import com.example.medicalc.service.MedicalCalculatorService;
 import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.models.security.SecurityScheme;
 import lombok.Data;
 import org.springframework.stereotype.Service;
 
@@ -99,7 +100,20 @@ public class GraceService implements MedicalCalculatorService<GraceDto> {
     }
 
     @Override
+    public ResultDto calculateResult(GraceDto dto) {
+        Integer offset;
+        offset = calculate(dto);
+        if(offset==null || offset==0){
+            return null;
+        }
+        return result(offset);
+    }
+
+    @Override
     public ResultDto result(Integer calc) {
+        if(calc==null || calc==0){
+            return null;
+        }
         ResultDto res = new ResultDto();
         res.setTitle(String.format("%s баллов по шкале GRACE", calc));
         StringBuilder stringBuilder = new StringBuilder();

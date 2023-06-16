@@ -44,7 +44,20 @@ public class ChildPughService implements MedicalCalculatorService<ChildPughDto> 
     }
 
     @Override
+    public ResultDto calculateResult(ChildPughDto dto) {
+        Integer offset;
+        offset=calculate(dto);
+        if(offset==null || offset==0){
+            return null;
+        }
+        return result(offset);
+    }
+
+    @Override
     public ResultDto result(Integer calc) {
+        if(calc==0 || calc==null){
+            return null;
+        }
         ResultDto res = new ResultDto();
         res.setTitle(calc + " баллов по шкале Чайлд-Пью");
         if (calc < 7) {
