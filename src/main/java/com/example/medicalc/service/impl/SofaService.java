@@ -91,7 +91,7 @@ public class SofaService implements MedicalCalculatorService<SofaDto> {
 
     @Override
     public ResultDto result(Integer calc) {
-        if(calc==null || calc==0){
+        if(calc==null){
             return null;
         }
         ResultDto res = new ResultDto();

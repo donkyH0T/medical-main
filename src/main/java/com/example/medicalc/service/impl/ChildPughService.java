@@ -55,7 +55,7 @@ public class ChildPughService implements MedicalCalculatorService<ChildPughDto> 
 
     @Override
     public ResultDto result(Integer calc) {
-        if(calc==0 || calc==null){
+        if(calc == null){
             return null;
         }
         ResultDto res = new ResultDto();
