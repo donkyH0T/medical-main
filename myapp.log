@@ -1,9 +1,103 @@
-2023-06-15 10:46:58.931 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2402 ms
-2023-06-15 10:46:59.564 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
-2023-06-15 10:47:00.446 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2023-06-15 10:47:00.462 INFO  c.e.medicalc.MedicalcApplication - Started MedicalcApplication in 5.727 seconds (process running for 7.393)
-2023-06-15 10:47:00.466 INFO  c.e.medicalc.MedicalcApplication - Application started
-2023-06-15 10:47:07.114 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-
-2023-06-15 11:30:13.551 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
-2023-06-15 11:30:16.987 INFO  c.e.m.r.ResultGraceRestController - Request to /GRACE/result
+2023-06-16 11:50:36.577 INFO  c.e.medicalc.MedicalcApplication - Starting MedicalcApplication using Java 19.0.2 with PID 165741 (/home/donkyhot/Desktop/medical-main/target/classes started by donkyhot in /home/donkyhot/Desktop/medical-main)
+2023-06-16 11:50:36.621 INFO  c.e.medicalc.MedicalcApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-16 11:50:38.341 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-06-16 11:50:38.354 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-16 11:50:38.355 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-16 11:50:38.494 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-16 11:50:38.494 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1741 ms
+2023-06-16 11:50:39.158 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2023-06-16 11:50:40.818 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-16 11:50:40.842 INFO  c.e.medicalc.MedicalcApplication - Started MedicalcApplication in 5.37 seconds (process running for 6.831)
+2023-06-16 11:50:40.846 INFO  c.e.medicalc.MedicalcApplication - Application started
+2023-06-16 11:50:43.488 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 11:50:43.489 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-16 11:50:43.490 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-16 11:50:46.939 INFO  c.e.m.r.ResultChildPughRestController - Request to /Child-Pugh/result
+2023-06-16 11:50:56.381 INFO  c.e.m.r.InformationRestController - Request to /Child-Pugh/info
+2023-06-16 11:50:59.038 INFO  c.e.m.r.InformationRestController - Request to /SOFA/info
+2023-06-16 11:51:16.553 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 11:51:16.553 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 11:56:21.051 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 11:56:28.298 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 11:56:28.317 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 11:56:51.530 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 11:56:51.537 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 11:57:00.828 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 11:57:00.834 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 11:57:07.276 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 12:00:17.012 INFO  c.e.medicalc.MedicalcApplication - Starting MedicalcApplication using Java 19.0.2 with PID 167250 (/home/donkyhot/Desktop/medical-main/target/classes started by donkyhot in /home/donkyhot/Desktop/medical-main)
+2023-06-16 12:00:17.020 INFO  c.e.medicalc.MedicalcApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-16 12:00:18.943 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-06-16 12:00:18.959 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-16 12:00:18.959 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-16 12:00:19.108 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-16 12:00:19.109 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1953 ms
+2023-06-16 12:00:19.690 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2023-06-16 12:00:20.807 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-16 12:00:20.826 INFO  c.e.medicalc.MedicalcApplication - Started MedicalcApplication in 4.651 seconds (process running for 6.339)
+2023-06-16 12:00:20.831 INFO  c.e.medicalc.MedicalcApplication - Application started
+2023-06-16 12:00:28.103 INFO  c.e.medicalc.MedicalcApplication - Starting MedicalcApplication using Java 19.0.2 with PID 167451 (/home/donkyhot/Desktop/medical-main/target/classes started by donkyhot in /home/donkyhot/Desktop/medical-main)
+2023-06-16 12:00:28.107 INFO  c.e.medicalc.MedicalcApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-16 12:00:29.592 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-06-16 12:00:29.602 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-16 12:00:29.602 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-16 12:00:29.716 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-16 12:00:29.717 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1534 ms
+2023-06-16 12:00:30.231 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2023-06-16 12:00:30.869 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-16 12:00:30.881 INFO  c.e.medicalc.MedicalcApplication - Started MedicalcApplication in 3.494 seconds (process running for 4.526)
+2023-06-16 12:00:30.884 INFO  c.e.medicalc.MedicalcApplication - Application started
+2023-06-16 12:00:35.353 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 12:00:35.353 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-16 12:00:35.355 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-06-16 12:00:37.003 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 12:02:05.204 INFO  c.e.medicalc.MedicalcApplication - Starting MedicalcApplication using Java 19.0.2 with PID 167908 (/home/donkyhot/Desktop/medical-main/target/classes started by donkyhot in /home/donkyhot/Desktop/medical-main)
+2023-06-16 12:02:05.207 INFO  c.e.medicalc.MedicalcApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-16 12:02:08.406 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-06-16 12:02:08.427 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-16 12:02:08.428 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-16 12:02:08.699 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-16 12:02:08.700 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3369 ms
+2023-06-16 12:02:10.455 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2023-06-16 12:02:12.554 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-16 12:02:12.634 INFO  c.e.medicalc.MedicalcApplication - Started MedicalcApplication in 8.83 seconds (process running for 10.506)
+2023-06-16 12:02:12.640 INFO  c.e.medicalc.MedicalcApplication - Application started
+2023-06-16 12:02:28.840 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 12:02:28.841 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-16 12:02:28.842 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-16 12:02:30.180 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 12:03:23.154 INFO  c.e.medicalc.MedicalcApplication - Starting MedicalcApplication using Java 19.0.2 with PID 168300 (/home/donkyhot/Desktop/medical-main/target/classes started by donkyhot in /home/donkyhot/Desktop/medical-main)
+2023-06-16 12:03:23.159 INFO  c.e.medicalc.MedicalcApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-16 12:03:24.870 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-06-16 12:03:24.880 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-16 12:03:24.881 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-16 12:03:24.996 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-16 12:03:24.996 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1763 ms
+2023-06-16 12:03:25.539 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2023-06-16 12:03:26.177 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-16 12:03:26.186 INFO  c.e.medicalc.MedicalcApplication - Started MedicalcApplication in 3.878 seconds (process running for 5.28)
+2023-06-16 12:03:26.188 INFO  c.e.medicalc.MedicalcApplication - Application started
+2023-06-16 12:03:28.231 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 12:03:28.232 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-16 12:03:28.233 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-16 12:03:29.545 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 12:04:16.289 INFO  c.e.medicalc.MedicalcApplication - Starting MedicalcApplication using Java 19.0.2 with PID 168591 (/home/donkyhot/Desktop/medical-main/target/classes started by donkyhot in /home/donkyhot/Desktop/medical-main)
+2023-06-16 12:04:16.294 INFO  c.e.medicalc.MedicalcApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-16 12:04:17.907 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-06-16 12:04:17.919 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-16 12:04:17.919 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-16 12:04:18.043 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-16 12:04:18.044 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1677 ms
+2023-06-16 12:04:18.728 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: ServletContext resource [/index.html]
+2023-06-16 12:04:19.920 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-16 12:04:19.933 INFO  c.e.medicalc.MedicalcApplication - Started MedicalcApplication in 4.281 seconds (process running for 5.401)
+2023-06-16 12:04:19.936 INFO  c.e.medicalc.MedicalcApplication - Application started
+2023-06-16 12:04:22.436 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-16 12:04:22.436 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-16 12:04:22.437 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-16 12:04:25.242 INFO  c.e.m.r.ResultGraceRestController - Request to /GRACE/result
+2023-06-16 12:04:40.326 INFO  c.e.m.r.ResultGraceRestController - Request to /GRACE/result
+2023-06-16 12:04:40.333 INFO  c.e.m.r.ResultGraceRestController - Request to /GRACE/result
+2023-06-16 12:04:46.560 INFO  c.e.m.r.ResultChildPughRestController - Request to /Child-Pugh/result
+2023-06-16 12:04:58.484 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result
+2023-06-16 12:04:58.490 INFO  c.e.m.r.ResultSofaRestController - Request to /SOFA/result

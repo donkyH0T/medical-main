@@ -45,7 +45,13 @@ sendButton.addEventListener('click', () => {
         },
         body: JSON.stringify(data)
     })
-        .then(response => response.json())
+        .then(response => {
+            if(response.ok){
+                return  response.json()
+            }else {
+                throw new Error('Ошибка HTTP: ' + response.status);
+            }
+        })
         .then(result => {
             setTimeout(() => {
                 out.textContent = result.title || "";
@@ -54,7 +60,7 @@ sendButton.addEventListener('click', () => {
             }, 3000);
         })
         .catch(error => {
-            out.textContent=('Ошибка '+ error);
+            out.textContent=(error);
             setTimeout(() => {
                 $('#spinner-div').hide();
             }, 3000);
