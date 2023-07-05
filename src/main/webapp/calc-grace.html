@@ -45,9 +45,7 @@
                 <div class="form-group col-md-6">
                     <label id="lbl_age_grace" for="age_grace">Возраст</label>
                     <div class="input-group">
-                        <input name="Возраст" min="1" max="10" type="text" class="form-control" id="age_grace"
-                               pattern="\d*"
-                               required/>
+                        <input name="Возраст" min="1" type="number" class="control" onchange="checkLimits(this)" id="age_grace" required/>
                         <div class="input-group-append">
                             <span class="input-group-text" id="basic-addon">лет</span>
                         </div>
@@ -56,8 +54,7 @@
                 <div class="form-group col-md-6">
                     <label id="lbl_rate_grace" for="rate_grace">ЧСС</label>
                     <div class="input-group">
-                        <input name="ЧСС" min="1" max="10" required type="text" class="form-control" id="rate_grace"
-                               pattern="\d*">
+                        <input name="ЧСС" min="1" required type="number" class="control" onchange="checkLimits(this)" id="rate_grace">
                         <div class="input-group-append">
                             <span class="input-group-text" id="basic-addon1">уд/мин</span>
                         </div>
@@ -66,8 +63,7 @@
                 <div class="form-group col-md-6"><label id="lbl_pressure_grace" for="pressure_grace">Систолическое
                     АД</label>
                     <div class="input-group">
-                        <input name="Систолическое АД" min="1" required max="10" type="text" class="form-control"
-                               id="pressure_grace" pattern="\d*">
+                        <input name="Систолическое АД" min="1" required type="number" class="control" onchange="checkLimits(this)" id="pressure_grace">
                         <div class="input-group-append"><span class="input-group-text"
                                                               id="basic-addon2">мм.рт.ст.</span></div>
                     </div>
@@ -75,8 +71,8 @@
                 <div class="form-group mb-1 col-md-6">
                     <label id="lbl_kreatinin_grace" for="kreatinin_grace">Креатинин плазмы</label>
                     <div class="unitfield input-group mb-3" id="unitfield_kreatinin_grace">
-                        <input name="Креатинин плазмы" min="1" max="10" required type="text" class="form-control"
-                               id="kreatinin_grace" pattern="\d*" koeff="1" index="1">
+                        <input name="Креатинин плазмы" min="1" required type="number" onchange="checkLimits(this)" class="control"
+                               id="kreatinin_grace" koeff="1" index="1">
                         <div class="input-group-append">
                             <span class="input-group-text">мкмоль/л</span>
                         </div>
@@ -148,16 +144,6 @@
             <div class="row">
                 <div class="col-md-6">
                     <p>&copy; 2023 Медицинский калькулятор. Все права защищены.</p>
-                </div>
-                <div class="col-md-6">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Условия предоставления услуг</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Политика конфиденциальности</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>

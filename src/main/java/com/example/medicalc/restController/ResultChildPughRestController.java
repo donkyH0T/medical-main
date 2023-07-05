@@ -33,12 +33,14 @@ public class ResultChildPughRestController {
     @Tag(name = "resultChild-Pugh", description = "POST запрос для ChildPugh в формате json")
     @PostMapping("Child-Pugh/result")
     @SneakyThrows
-    public ResponseEntity<ResultDto> result(@NonNull @RequestBody ChildPughDto childPughDto) {
+    public ResultDto result(@NonNull @RequestBody ChildPughDto childPughDto) {
         log.info("Request to /Child-Pugh/result");
-        ResultDto resultDto= childPughService.calculateResult(childPughDto);
-        if(resultDto==null){
-            return ResponseEntity.badRequest().body(new ResultDto("Ошибка расчета Child-Pugh"));
+        ResultDto resultDto;
+        try {
+            resultDto=childPughService.calculateResult(childPughDto);
+        }catch (Exception e){
+            return (new ResultDto("Ошибка расчета Child-Pugh"));
         }
-        return ResponseEntity.ok(resultDto);
+        return resultDto;
     }
 }

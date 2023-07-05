@@ -40,7 +40,7 @@
         <div class="col">
         </div>
         <div id="calc_input" class="col-6">
-            <h1>Шкала SOFA</h1>
+            <h1 style="padding-left: 27%;">Шкала SOFA</h1>
             <form name="form" id="form">
                 <table>
                     <tbody>
@@ -48,7 +48,7 @@
                         <td width="42%" align="right">
                             <span class="medCalcFontOneBold">PaO<sub>2</sub></span></td>
                         <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
-                            <input type="text" id="PaO2_param" min="1" max="10" name="PaO2_param" size="6" required pattern="\d*">
+                            <input type="number" class="control" id="PaO2_param" onchange="checkLimits(this)" name="PaO2_param" size="6" required>
                         </td>
                         <td valign="top" align="left">
                             <span> mmHg</span>
@@ -59,7 +59,7 @@
                         <td width="42%" align="right">
                             <span class="medCalcFontOneBold">FIO<sub>2</sub></span></td>
                         <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
-                            <input type="text" id="FIO2_param" min="1" max="10" name="FIO2_param" size="6" required pattern="\d*">
+                            <input type="number" class="control" id="FIO2_param" onchange="checkLimits(this)" name="FIO2_param" size="6" required>
                         </td>
                         <td valign="top" align="left">
                             <span>%O2</span>
@@ -71,7 +71,7 @@
                             <span class="medCalcFontOneBold">Вспомогательная Искусственная вентиляция легких</span>
                         </td>
                         <td colspan="2" align="left">
-                            <input type=radio name="Ventilatory_Support_radio" id="togel1" value=1>
+                            <input type=radio name="Ventilatory_Support_radio"  id="togel1" value=1>
                             <span class="medCalcFontOneClick"> Да (1)</span></td>
                     </tr>
                     <tr>
@@ -84,8 +84,7 @@
                         <td width="42%" align="right">
                             <span class="medCalcFontOneBold">Тромбоциты</span></td>
                         <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
-                            <input type="text" name="Platelets_param" min="1" max="10" id="Platelets_param" size="6" required
-                                   pattern="\d*">
+                            <input type="number" class="control" name="Platelets_param" min="1" onchange="checkLimits(this)" id="Platelets_param" size="6" required>
                         </td>
                         <td valign="top" align="left">
                             <span>  x10(3)/mcL</span>
@@ -96,9 +95,8 @@
                         <td width="42%" align="right">
                             <span class="medCalcFontOneBold">Общий Билирубин</span></td>
                         <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
-                            <input type="text" id="Total_Bilirubin_param" min="1" max="10" name="Total_Bilirubin_param" size="6"
-                                   required
-                                   pattern="\d*"></td>
+                            <input type="number" class="control" id="Total_Bilirubin_param" min="1" onchange="checkLimits(this)" name="Total_Bilirubin_param" size="6"
+                                   required></td>
                         <td valign="top" align="left">
                             <span>  mg/dL</span>
                         </td>
@@ -143,9 +141,9 @@
                         <td width="42%" align="right">
                             <span class="medCalcFontOneBold">Оценка по шкале комы Глазго</span></td>
                         <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
-                            <input type="text" name="Glasgow_Coma_Score_param" min="1" max="10" id="Glasgow_Coma_Score_param"
+                            <input type="number" class="control" name="Glasgow_Coma_Score_param" onchange="checkLimits(this)" min="1" id="Glasgow_Coma_Score_param"
                                    size="6"
-                                   required pattern="\d*"></td>
+                                   required></td>
                         <td valign="top" align="left">
                             <span> points </span>
                         </td>
@@ -154,7 +152,7 @@
                     <tr>
                         <td width="42%" align="right"><span class="medCalcFontOneBold">Креатинин</span></td>
                         <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
-                            <input type="text" name="Creatinine_param" min="1" max="10" id="Creatinine_param" size="6" required></td>
+                            <input type="number" class="control" name="Creatinine_param" onchange="checkLimits(this)" min="1" id="Creatinine_param" size="6" required></td>
                         <td valign="top" align="left">
                             <span>mg/dL</span>
                         </td>
@@ -162,7 +160,7 @@
                     <tr>
                         <td width="42%" align="right"><span class="medCalcFontOneBold">Диурез</span></td>
                         <td width="5%" valign="top" nowrap="nowrap" align="left">&nbsp;
-                            <input type="text" name="Urine_Output_param" min="1" max="10" id="Urine_Output_param" size="6" required>
+                            <input type="number" class="control" name="Urine_Output_param" onchange="checkLimits(this)" min="1" id="Urine_Output_param" size="6" required>
                         </td>
                         <td valign="top" align="left"> <span style="white-space: nowrap;">
                     <span class="medCalcFontOneBold">мл/сутки</span></span></td>
@@ -195,16 +193,6 @@
             <div class="row">
                 <div class="col-md-6">
                     <p>&copy; 2023 Медицинский калькулятор. Все права защищены.</p>
-                </div>
-                <div class="col-md-6">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Условия предоставления услуг</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Политика конфиденциальности</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>

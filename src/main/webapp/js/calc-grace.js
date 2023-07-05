@@ -11,7 +11,8 @@ let ans3_grace = document.getElementById("ans3_grace");
 const resetButton = document.querySelector('button[type="reset"]');
 
 resetButton.addEventListener('click', function () {
-    displayElement.textContent = "";
+    out.textContent = "";
+    out2.textContent = "";
 });
 
 sendButton.addEventListener('click', () => {
@@ -27,11 +28,12 @@ sendButton.addEventListener('click', () => {
     if (ans3_grace.checked) {
         elevated = "1";
     }
+
     const data = {
         age: document.getElementById("age_grace").value,
         hr: document.getElementById("rate_grace").value,
-        systolic: document.getElementById("pressure_grace").value,
-        plasmaCreatinine: document.getElementById("kreatinin_grace").value,
+        systolic: document.getElementById("rate_grace").value,
+        plasmaCreatinine:document.getElementById("kreatinin_grace").value,
         cardiacArrest: cardiac,
         stsegmentoffset: sts,
         elevatedMarkerLevels: elevated,
@@ -61,14 +63,27 @@ sendButton.addEventListener('click', () => {
         })
         .catch(error => {
             out.textContent=(error);
+            out2.textContent="";
             setTimeout(() => {
                 $('#spinner-div').hide();
             }, 3000);
         });
 });
 
+function checkLimits(input) {
+    if (input.value < 0) {
+        input.value = 0;
+    } else if (input.value > 100) {
+        input.value = 100;
+    }
+}
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    sendButton.click();
+    if(document.getElementById("age_grace").value===""||document.getElementById("rate_grace").value===""||document.getElementById("rate_grace").value==="" ||document.getElementById("kreatinin_grace").value===""||document.querySelector('#ans4_grace').value===""){
+        alert("Поле не может быть пустым!");
+    }else{
+    sendButton.click();}
+
 });
 

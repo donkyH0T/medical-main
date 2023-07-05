@@ -13,8 +13,17 @@ let ans5_grace = document.getElementById("togel7");
 const resetButton = document.querySelector('#Reset');
 
 resetButton.addEventListener('click', function () {
-    displayElement.textContent = "";
+    out.textContent = "";
+    out2.textContent = "";
 });
+
+function checkLimits(input) {
+    if (input.value < 0) {
+        input.value = 0;
+    } else if (input.value > 100) {
+        input.value = 100;
+    }
+}
 
 
 sendButton.addEventListener('click', () => {

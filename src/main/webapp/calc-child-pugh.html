@@ -38,69 +38,69 @@
         <div class="col">
         </div>
         <div id="calcwrapper" class="col-6">
-            <h1>Шкала Чайлд-Пью</h1>
+            <h1 class="display-4">Шкала Чайлд-Пью</h1>
             <div id="formwrapper">
-                <div class="form">
+                <div class="form-group">
                     <form name="form" id="form">
-                        <div class="forminput">
+                        <div class="form-group">
                             <legend>Билирубин (общий), мкмоль/л</legend>
                             <div class="dropdown">
-                                <select id="mySelect1" class="dropdown-select">
+                                <select id="mySelect1" class="form-control">
                                     <option>&lt;34.2</option>
                                     <option>34.2 - 51.3</option>
                                     <option>&gt;51.3</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="forminput">
+                        <div class="form-group">
                             <legend>Альбумин, г/л</legend>
                             <div class="dropdown">
-                                <select id="mySelect2" class="dropdown-select">
+                                <select id="mySelect2" class="form-control">
                                     <option>&gt;35</option>
                                     <option>28 - 35</option>
                                     <option>&lt;28</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="forminput">
+                        <div class="form-group">
                             <legend>МНО</legend>
                             <div class="dropdown">
-                                <select id="mySelect3" class="dropdown-select">
+                                <select id="mySelect3" class="form-control">
                                     <option>&lt;1.7</option>
                                     <option>1.7 - 2.2</option>
                                     <option>&gt;2.2</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="forminput">
+                        <div class="form-group">
                             <legend>Асцит</legend>
                             <div class="dropdown">
-                                <select id="mySelect4" class="dropdown-select">
+                                <select id="mySelect4" class="form-control">
                                     <option>Нет</option>
                                     <option>Легкий</option>
                                     <option>Средний или тяжелый</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="forminput">
+                        <div class="form-group">
                             <legend>Энцефалопатия</legend>
                             <div class="dropdown">
-                                <select id="mySelect5" class="dropdown-select">
+                                <select id="mySelect5" class="form-control">
                                     <option>Нет</option>
                                     <option>1 - 2 степень</option>
                                     <option>3 - 4 степень</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="formbuttons">
-                            <input type="button" id="Send" value="Рассчитать">
-                            <input type="reset" value="Очистить">
+                        <div class="form-group">
+                            <input type="button" id="Send" value="Рассчитать" class="btn btn-primary">
+                            <input type="reset" value="Очистить" class="btn btn-secondary">
                         </div>
                     </form>
                 </div>
                 <div id="result">
-                    <h1 id="title" class="title"></h1>
-                    <h1 id="details" class="details"></h1>
+                    <h1 id="title" class="display-4"></h1>
+                    <h1 id="details" class="display-4"></h1>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -120,16 +120,6 @@
             <div class="row">
                 <div class="col-md-6">
                     <p>&copy; 2023 Медицинский калькулятор. Все права защищены.</p>
-                </div>
-                <div class="col-md-6">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Условия предоставления услуг</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Политика конфиденциальности</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>

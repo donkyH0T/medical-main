@@ -19,7 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("calculator/")
 @Log4j2
 public class ResultSofaRestController {
+
     private final SofaService sofaService;
+
 
     @Autowired
     protected ResultSofaRestController(SofaService srv) {
@@ -29,12 +31,14 @@ public class ResultSofaRestController {
     @Qualifier("SofaService")
     @Tag(name = "resultSOFA", description = "POST запрос для SOFA в формате json")
     @PostMapping("SOFA/result")
-    public ResponseEntity<ResultDto> result(@NonNull @RequestBody SofaDto sofaDto) {
+    public ResultDto result(@NonNull @RequestBody SofaDto sofaDto) {
         log.info("Request to /SOFA/result");
-        ResultDto resultDto=sofaService.calculateResult(sofaDto);
-        if(resultDto==null){
-            return ResponseEntity.badRequest().body(new ResultDto("Ошибка расчета SOFA"));
+        ResultDto resultDto;
+        try{
+        resultDto= sofaService.calculateResult(sofaDto);}
+        catch (Exception e){
+            return new ResultDto("Ошибка расчета SOFA");
         }
-        return ResponseEntity.ok(resultDto);
+        return resultDto;
     }
 }

@@ -30,12 +30,13 @@ public class ResultGraceRestController {
     @Tag(name = "resultGRACE", description = "POST запрос для GRACE в формате json")
     @PostMapping("GRACE/result")
     @SneakyThrows
-    public ResponseEntity<ResultDto> result(@NonNull @RequestBody GraceDto graceDto) {
+    public ResultDto result(@NonNull @RequestBody GraceDto graceDto) {
         log.info("Request to /GRACE/result");
-        ResultDto resultDto=graceService.calculateResult(graceDto);
-        if (resultDto == null) {
-            return ResponseEntity.badRequest().body(new ResultDto("Ошибка расчета GRACE"));
+        ResultDto resultDto;
+        try{resultDto=graceService.calculateResult(graceDto);
+        }catch (Exception e) {
+            return (new ResultDto("Ошибка расчета GRACE"));
         }
-        return ResponseEntity.ok(resultDto);
+        return resultDto;
     }
 }
